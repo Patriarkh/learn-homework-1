@@ -15,13 +15,21 @@
     
 """
 
-questions_and_answers = {}
+questions_and_answers = {"Как дела?": "Хорошо!",
+                         "Что делаешь?": "Программирую",
+                         "Когда освободишься?": "Скоро",
+}
 
 def ask_user(answers_dict):
-    """
-    Замените pass на ваш код
-    """
-    pass
+    user_question = input("Пожалуйста, введите ваш вопрос: ")
+    if user_question in answers_dict:
+        print(answers_dict[user_question])
+    else:
+        print("Такого вопроса нет")
+
+    
     
 if __name__ == "__main__":
     ask_user(questions_and_answers)
+
+#Не понимаю логику. Почему в фунцкии нет questions_and_answers?
